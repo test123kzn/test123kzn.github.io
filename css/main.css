@@ -767,8 +767,7 @@ button {
 .competitor {
   background-color: #f6cc16;
   padding-top: 70px;
-  position: relative;
-  min-height: 546px; }
+  position: relative; }
   .competitor__img {
     position: absolute; }
     .competitor__img-left {
@@ -1034,8 +1033,7 @@ button {
 
 .china {
   background-color: #f6ce15;
-  padding-top: 24px;
-  min-height: 713px; }
+  padding-top: 24px; }
   .china__wrap {
     position: relative;
     left: 60px;
@@ -1278,11 +1276,9 @@ button {
     left: -170px; }
   .trust {
     background-position: top right -230px; }
-  .china {
-    min-height: 0; }
-    .china__wrap {
-      left: 100px;
-      margin-left: -100px; }
+  .china__wrap {
+    left: 100px;
+    margin-left: -100px; }
   .contacts__info {
     padding-left: 10px; } }
 
@@ -1354,6 +1350,14 @@ button {
     font-size: 14px; }
   .fz14 {
     font-size: 13px; }
+  .lh__55 {
+    line-height: 45px; }
+  .form__call {
+    padding: 10px; }
+  .trust__title {
+    margin-left: -20px;
+    left: 20px;
+    position: relative; }
   .modal-open {
     padding-right: 0px !important; }
   *::-webkit-scrollbar {
@@ -1390,8 +1394,11 @@ button {
     left: 0;
     color: #282828; }
   .china__wrap {
-    margin-left: 0;
-    left: 0; }
+    margin-left: -210px;
+    left: 210px; }
+  .china__text {
+    width: 80%;
+    margin-bottom: 20px; }
   .china__img-block {
     top: 180px;
     right: 0; }
@@ -1420,7 +1427,17 @@ button {
   .mobile__none1 {
     display: none; }
   .sect__error-img {
-    margin: 60px 0; } }
+    margin: 60px 0; }
+  .production__list {
+    margin-top: 20px; }
+  .production__title2 {
+    width: 90%; }
+  .competitor__title {
+    margin-left: -150px; }
+  .competitor__block {
+    padding: 16px 10px; }
+  .inp__all {
+    min-height: 56px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1023px) {
@@ -1502,7 +1519,22 @@ button {
     margin-left: -20px;
     left: 20px; }
   .inp__all {
-    min-height: 56px; } }
+    min-height: 56px; }
+  .competitor__title {
+    margin-left: 0; }
+  .competitor__image {
+    display: none; }
+  .competitor__img {
+    display: none; }
+  .competitor__block {
+    padding: 20px 30px; }
+  .quality__block-item {
+    margin-top: 20px; }
+  .china__wrap {
+    margin-left: 0;
+    left: 0; }
+  .china__text {
+    width: 100%; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 769px) {
@@ -1578,7 +1610,12 @@ button {
   .contacts {
     padding: 90px 0; }
   .partner__slider-img .img-responsive {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .better__block {
+    padding: 14px; }
+  .trust__title {
+    margin-left: 0;
+    left: 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 499px) {
@@ -1669,7 +1706,11 @@ button {
             justify-content: center;
     margin-bottom: 30px; }
   .sect__ind-item__img {
-    margin-top: 0; } }
+    margin-top: 0; }
+  .production__title2 {
+    width: 100%; }
+  .production__df-img {
+    display: none; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
