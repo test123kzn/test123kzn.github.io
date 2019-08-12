@@ -1,0 +1,981 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: $color
+  opacity: 1
+
+*:-moz-placeholder
+  color: $color
+  opacity: 1
+
+*::-moz-placeholder
+  color: $color
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: $color
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: $color
+body input:required:valid,
+body textarea:required:valid
+  color: $color
+*::selection
+  background-color: $accent
+  color: #fff
+*::-webkit-scrollbar-thumb
+  background-color: $accent
+*::-webkit-scrollbar
+  width: 7px
+*::-webkit-scrollbar-track
+  background: #e8e8e8
+html, body
+  background-color: #fff
+  overflow-x: hidden
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $fonts
+  overflow-x: hidden
+  opacity: 1
+  color: $color
+.img-responsive, img
+  display: block
+  max-width: 100%
+  height: auto
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  margin: 0 0 20px
+  color: $color
+  font-size: 24px
+  line-height: normal!important
+  font-family: 'Jura-Bold', sans-serif!important
+.modal-open
+  padding-right: 7px!important
+.has-error
+  .inp__all
+    border: 1px solid red
+input, textarea
+  outline: none
+textarea
+  resize: none
+strong, b
+  font-weight: bold!important
+  font-family: 'Jura-Bold', sans-serif!important
+a
+  position: relative
+  text-decoration: none
+  outline: none
+  color: $color
+  transition: all .4s ease
+  &:hover, &:active, &:focus
+    outline: none
+    text-decoration: none
+    color: $accent
+button
+  outline: none
+  background: transparent
+  font-family: 'Jura-Bold', sans-serif
+  border: none
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+.js-svg-img
+  opacity: 0
+  max-width: 100%
+  max-height: 100%
+  path
+    transition: all .4s ease
+  &.ready
+    opacity: 1
+.js-disabled
+  opacity: 1
+  &:disabled
+    opacity: 0.6
+    cursor: auto
+.lazy
+  width: auto
+  background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+  &.loaded
+    background-image: none
+.ff__jb
+  font-family: 'Jura-Bold', sans-serif
+.ff__jl
+  font-family: 'Jura-Light', sans-serif
+.ff__jm
+  font-family: 'Jura-Medium', sans-serif
+.ff__jsb
+  font-family: 'Jura-SemiBold', sans-serif
+.ff__ror
+  font-family: 'RussoOne-Regular', sans-serif
+.fz48
+  font-size: 48px
+.fz45
+  font-size: 45px
+.fz38
+  font-size: 38px
+.fz35
+  font-size: 35px
+.fz33
+  font-size: 33px
+.fz30
+  font-size: 30px
+.fz26
+  font-size: 26px
+.fz25
+  font-size: 25px
+.fz24
+  font-size: 24px
+.fz22
+  font-size: 22px
+.fz20
+  font-size: 20px
+.fz19
+  font-size: 19px
+.fz18
+  font-size: 18px
+.fz17
+  font-size: 17px
+.fz15
+  font-size: 15px
+.fz14
+  font-size: 14px
+
+.lh__55
+  line-height: 55px
+.lh__34
+  line-height: 34px
+.lh__25
+  line-height: 25px
+.section__wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.js__bi
+  background-position: center
+  background-size: cover
+.btn
+  &__all
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    position: relative
+    width: 100%
+    min-height: 40px
+    border-radius: 5px
+    border: 1px solid transparent
+    cursor: pointer
+    transition: all .4s ease
+.inp__all
+  border: 2px solid #282828
+  background-color: transparent
+  min-height: 76px
+  width: 100%
+  border-radius: 15px
+  padding: 4px 26px
+  &:focus, &:not(:placeholder-shown)
+    &~ .inp__label
+      top: 20%
+.inp
+  &__parent
+    position: relative
+    margin-bottom: 28px
+    z-index: 1
+  &__label
+    position: absolute
+    top: 50%
+    left: 26px
+    transform: translateY(-50%)
+    z-index: -1
+    transition: all .4s ease
+.closess
+  position: absolute
+  width: 18px
+  height: 18px
+  top: 10px
+  right: 10px
+  z-index: 2
+  outline: none
+  border: none
+  cursor: pointer
+  background-color: transparent
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 80%
+    height: 1px
+    border-radius: 10px
+    cursor: pointer
+    top: 11px
+    left: 2px
+    background-color: $color
+    transition: all .4s ease
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+  &:hover
+    &::before, &::after
+      background-color: $accent
+
+.max__width
+  max-width: 1920px
+  margin: 0 auto
+  position: relative
+.pb__100
+  padding-bottom: 100px
+.sect__ind
+  background-color: #1e1c27
+  position: relative
+  &-circle
+    position: relative
+    &__img
+      position: absolute
+      top: 0
+      right: 0
+  &-wrap
+    margin-top: 40px
+  &-title
+    color: #ffffff
+  &-title2
+    color: $accent
+  &-info
+    margin: 30px 0
+  &-item
+    display: flex
+    justify-content: space-between
+    margin-left: -20px
+    &__img
+      margin-top: -30px
+    &__title
+      color: #ffffff
+      width: 77%
+  &-btn
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__title
+      color: $accent
+  &-plata
+    position: absolute
+    bottom: -78px
+    right: -80px
+    width: 67%
+  .max__width
+    background-position: top right
+
+.bi__right
+  background-position: right
+  background-repeat: no-repeat
+  background-size: auto
+.bi__left
+  background-position: left
+  background-repeat: no-repeat
+  background-size: auto
+.btn__img
+  position: relative
+  cursor: pointer
+  transition: all .4s ease
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    box-shadow: 0 0 20px 12px #ffcc00
+    opacity: .5
+    border-radius: 2px
+  .img-responsive
+    background: #7d6617
+  &-no
+    &::before
+      display: none
+    .img-responsive
+      background-color: transparent
+  &-title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    text-transform: uppercase
+  &.disabled
+    opacity: .6
+    cursor: auto
+.logo
+  &__a
+    display: block
+.head
+  padding-top: 20px
+  &__title
+    color: #ffffff
+  &__right
+    display: flex
+    justify-content: flex-end
+  &__call
+    cursor: pointer
+    position: relative
+    color: #000
+    display: inline-block
+    margin-top: 6px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: #000
+      transition: all .4s ease
+    &:hover
+      &::before
+        left: auto
+        width: 0
+        right: 0
+  &__phone
+    &:hover
+      color: #000000
+.advantage
+  min-height: 630px
+  position: relative
+  &__wrap
+    padding: 100px 0 70px
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+  &__right
+    position: relative
+    text-align: center
+    &-df
+      display: inline-flex
+      z-index: 1
+      margin-left: 140px
+      margin-top: 20px
+      &__title
+        display: inline-block
+        margin-right: 8px
+      &__img
+        position: relative
+        top: 10px
+    &-img
+      position: absolute
+      top: 0
+      right: -38%
+      z-index: -1
+  &__item
+    margin-bottom: 30px
+    &-num
+      display: flex
+      align-items: center
+      &__title
+        color: #fcb922
+        display: inline-block
+      &__img
+        margin-left: 20px
+        .js-svg-img
+          fill: #f4d113!important
+          path, polygon
+            fill: #f4d113!important
+    &-title
+      margin-top: 16px
+.pen
+  padding: 54px 0
+  background: linear-gradient(#f4cf15, #fcba22)
+  &__img
+    .img-responsive
+      margin: 0 auto
+.partner
+  padding: 88px 0
+  &__title
+    text-align: center
+  &__slider
+    margin: 50px auto 0
+    &-img
+      display: block
+      //width: auto!important
+      filter: grayscale(1)
+      margin: 0 20px
+      .img-responsive
+        height: 50px
+      &:hover
+        filter: grayscale(0)
+.slick-dots
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 26px
+  button
+    font-size: 0
+    width: 10px
+    height: 10px
+    border: 2px solid #282828
+    background-color: #fff
+    border-radius: 50%
+    cursor: pointer
+    margin: 0 8px
+    padding: 0
+  .slick-active
+    button
+      background-color: $accent
+      border: 1px solid #282828
+.c__accent
+  color: $accent
+.keys
+  background-color: #1e1c27
+  min-height: 640px
+  position: relative
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+  &__title
+    color: #ffffff
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 40px
+  &__wrap
+    padding: 90px 0 60px
+  &__item
+    display: flex
+    flex-direction: column
+    height: 100%
+    &-title
+      color: $accent
+      margin-top: auto
+      margin-bottom: 20px
+    &-text
+      color: #ffffff
+      margin-bottom: 20px
+    &-plus
+      margin-top: auto
+      color: #ffffff
+      padding-left: 12px
+      position: relative
+      &::before
+        content: '+'
+        position: absolute
+        top: 0
+        left: 0
+        color: $accent
+  &__line
+    border-right: 2px solid $accent
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      right: -5px
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      border: 2px solid $accent
+    &::before
+      top: -6px
+    &::after
+      bottom: -6px
+.mb__40
+  margin-bottom: 40px
+.c__black
+  color: #282828
+.production
+  padding: 96px 0
+  &__block
+    display: flex
+    align-items: center
+    margin-top: 64px
+    &-title
+      margin-right: 10px
+    &-img
+      position: relative
+      transform: rotateX(180deg)
+      top: -6px
+  &__img
+    &-big
+      position: relative
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        top: 26px
+        left: 0
+        width: 90%
+        height: 100%
+        border: 5px solid #fcb922
+        z-index: -1
+      .img-responsive
+        margin: 0 auto
+    &-min
+      position: relative
+      z-index: 2
+      top: -30px
+  &__title
+    text-transform: uppercase
+    margin-bottom: 10px
+  &__title2
+    margin-right: 20px
+    width: 50%
+  &__text
+    margin-bottom: 10px
+  &__df
+    display: flex
+    align-items: center
+    &-img
+      position: relative
+      top: 6px
+  &__list
+    margin-bottom: 30px
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      li
+        margin-bottom: 4px
+        &:last-child
+          margin-bottom: 0
+
+.control
+  position: relative
+  min-height: 765px
+  background-color: #1e1c27
+  &__wrap
+    padding: 50px 0 80px
+  &__img
+    position: absolute
+    top: 0
+    right: 0
+  &__title
+    text-transform: uppercase
+    color: #ffffff
+    margin-top: 36px
+    margin-bottom: 8px
+  &__title2
+    color: #ffffff
+    margin-bottom: 26px
+  &__title3
+    color: $accent
+    text-transform: uppercase
+    margin: 36px 0 16px
+  &__text
+    color: #ffffff
+  &__item
+    margin-bottom: 14px
+    &-title
+      color: $accent
+    &-text
+      color: #ffffff
+.competitor
+  background-color: #f6cc16
+  padding-top: 70px
+  position: relative
+  min-height: 546px
+  &__img
+    position: absolute
+    &-left
+      bottom: 10px
+      left: 0
+    &-right
+      right: 0
+      top: 16px
+  &__title
+    margin-top: 10px
+    margin-bottom: 36px
+  &__text
+    margin-bottom: 40px
+  &__block
+    padding: 20px 30px
+    background-color: #ffffff
+    border-radius: 15px
+    margin-bottom: 40px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 18px
+      left: -114px
+      width: 0
+      height: 0
+      border-style: solid
+      border-color: transparent #fff transparent transparent
+      border-width: 0 116px 50px 0
+.c__white
+  color: #ffffff
+.better
+  padding: 100px 0
+  &__block
+    background-color: #ffffff
+    border-radius: 15px
+    padding: 30px
+  &__blocks
+    padding: 24px 0
+    border-bottom: 2px solid #fcb922
+    &:last-child
+      border-bottom: none
+    &-item
+      &__img
+        .img-responsive
+          margin-left: auto
+  &__wrap
+    border: 2px solid #fcb922
+    border-radius: 15px
+    padding: 40px 20px
+  &__title
+    text-align: center
+    margin-bottom: 16px
+  &__text
+    text-align: center
+    letter-spacing: -1px
+    margin-bottom: 18px
+.sect__bi
+  background-position: center
+  background-size: cover
+.trust
+  background-color: #f6cb17
+  padding: 94px 0
+  &__title
+    text-transform: uppercase
+  &__text
+    letter-spacing: -1px
+    margin-top: 30px
+.form__call
+  background-color: #ffffff
+  border-radius: 15px
+  padding: 26px
+  &-wrap
+    border-radius: 15px
+    border: 2px solid #fcb922
+    padding: 40px 26px
+  &-title
+    margin-bottom: 24px
+  &-check
+    margin-top: 30px
+    &__label
+      margin: 0
+      padding-left: 58px
+      position: relative
+      cursor: pointer
+      line-height: 20px
+      &::before
+        content: ''
+        position: absolute
+        top: 6px
+        left: 6px
+        width: 30px
+        height: 30px
+        border-radius: 5px
+        border: 2px solid #fcb922
+      &::after
+        content: ''
+        position: absolute
+        top: -10px
+        left: 0
+        width: 33px
+        height: 39px
+        background-image: url(../icons/galka.png)
+        transition: all .4s ease
+        opacity: 0
+      a
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 1px
+          background-color: $accent
+          transition: all .4s ease
+        &:hover
+          &::before
+            content: ''
+            left: auto
+            right: 0
+            width: 0
+.inp__check[type=checkbox]:checked + .form__call-check__label::after
+  opacity: 1
+.inp__check
+  display: none
+.step
+  padding: 90px 0
+  background-color: #1e1c27
+  &__title
+    color: #ffffff
+    text-transform: uppercase
+  &__wrap
+    margin-top: 26px
+    &-btn
+      margin-top: 20px
+  &__item
+    margin-bottom: 18px
+    &-num
+      position: relative
+      &__img
+        .img-responsive
+          margin-left: auto
+      &__title
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+    &-title
+      position: relative
+      left: 20px
+      margin-left: -20px
+      letter-spacing: -1px
+.quality
+  padding: 84px 0
+  &__title
+    text-transform: uppercase
+  &__wrap
+    margin-top: 24px
+  &__item
+    margin-bottom: 18px
+    &:last-child
+      margin-bottom: 0
+    &-img
+      .img-responsive
+        margin: 0 auto
+  &__block
+    color: #ffffff
+    position: relative
+    &-title
+      margin-bottom: 16px
+    &-wrap
+      position: absolute
+      top: 100px
+      left: 0
+      color: #ffffff
+    &-item
+      width: 90%
+.photo
+  background-color: #1e1c27
+  padding: 86px 0
+  text-align: center
+  &__title
+    text-transform: uppercase
+    margin-bottom: 18px
+  &__slider
+    .slick-track
+      padding: 40px 0
+    .slick-slide
+      margin: 0 20px
+      img
+        width: 100%
+        height: 100%
+    &-item
+      display: block
+      height: 210px
+    .slick-dots
+      margin-top: 0
+      button
+        background-color: transparent
+        border: 2px solid #fff
+      .slick-active
+        button
+          background-color: $accent
+          border-color: $accent
+.fancy__img
+  position: relative
+  overflow: hidden
+  border-radius: 15px
+  border: 1px solid #fff
+  transition: all .4s ease
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(#000, .6)
+    opacity: 0
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 70px
+    height: 56px
+    transform: translate(-50%,-50%)
+    background-image: url(../icons/svg/zoom.svg)
+    background-repeat: no-repeat
+    background-size: 100%
+    transition: all .4s ease
+    opacity: 0
+  &:hover
+    box-shadow: 0 0 16px 16px #766118
+    &::before, &::after
+      opacity: 1
+.china
+  background-color: #f6ce15
+  padding-top: 24px
+  min-height: 713px
+  &__wrap
+    position: relative
+    left: 60px
+    margin-left: -60px
+  &__title
+    margin-bottom: 30px
+  &__img
+    position: relative
+    .img-responsive
+      margin: 0 auto
+    &-block
+      position: absolute
+      top: 210px
+      right: 50px
+    &-title
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: -60px
+        left: 0
+        width: 24px
+        height: 34px
+        background-image: url(../icons/svg/circut2.svg)
+        background-size: 100%
+.cases
+  padding: 70px 0
+  &__title
+    display: flex
+    align-items: center
+    justify-content: center
+    &-left
+      text-transform: uppercase
+      margin-right: 28px
+  &__wrap
+    margin-top: 40px
+  &__item
+    display: flex
+    flex-direction: column
+    height: calc(100% - 30px)
+    margin-bottom: 30px
+    border-radius: 15px
+    background-color: #1e1c27
+    box-shadow: 0 0 10px 4px #d7d7d7
+    padding: 40px 20px
+    min-height: 300px
+    &-img
+      .img-responsive
+        margin: 0 auto
+    &-title
+      margin-bottom: 16px
+      min-height: 90px
+    &-text
+      margin-top: auto
+      color: #ffffff
+.contacts
+  padding: 144px 0
+  position: relative
+  &__poa
+    position: absolute
+    top: -50px
+    left: 0
+  &__map
+    height: 630px
+    border-radius: 15px
+    overflow: hidden
+  &__info
+    background-color: #ffffff
+    border-radius: 15px
+    padding: 38px 26px
+    position: relative
+    overflow: hidden
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 100px
+      height: 100%
+      box-shadow: 0 0 16px 16px #a9a9a9
+  &__item
+    display: flex
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    &-img
+      width: 34px
+      margin-right: 12px
+    &-title
+      width: 66%
+  &__black
+    background-color: #1e1c27
+    border-radius: 15px
+    padding: 38px 26px
+    position: relative
+    z-index: 2
+    margin-top: 30px
+    &-title
+      text-transform: uppercase
+      margin-bottom: 20px
+    &-text
+      color: #ffffff
+      margin-bottom: 4px
+    &-a
+      display: inline-block
+.foot
+  margin-top: auto
+  background-color: #1e1c27
+  padding: 50px 0
+  border-top: 5px solid $accent
+  &__info
+    &-a
+      color: #ffffff
+    &-before
+      position: relative
+      color: $accent
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 1px
+        width: 100%
+        background-color: $accent
+        transition: all .4s ease
+      &:hover
+        &::before
+          left: auto
+          right: 0
+          width: 0
+  &__copy
+    color: #ffffff
+    text-align: center
+    margin-top: 6px
+.mt__40
+  margin-top: 40px
+.mt__auto
+  margin-top: auto
+.sect__vh
+  padding: 40px 0
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.sect__error
+  text-align: center
+  color: #ffffff
+  &-img
+    margin: 120px 0
+    .img-responsive
+      margin: 0 auto
+.sect__thank
+  color: #ffffff
+
+@import "media"
+// Всегда в конце
