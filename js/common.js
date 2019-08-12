@@ -4,11 +4,6 @@ $(function () {
         elements_selector: ".lazy"
     });
 
-    $('.js__bi').each(function () {
-        var $ind_bg = $(this).data('bi');
-        $(this).css('background-image', 'url(' + $ind_bg + ')');
-    });
-
     $(document).on('click','.js__label-title',function () {
         var $parent = $(this).parents('.js__label');
         var $check = $parent.find('.js__label-check');

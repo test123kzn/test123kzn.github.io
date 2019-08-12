@@ -66,7 +66,7 @@
                             <div class="head__right">
                                 <div class="head__right-block">
                                     <a href="tel:" class="head__phone fz18 ff__jb">+7 (800) 000-00-00</a>
-                                    <div class="head__call fz18 lh__25 ff__jb">Позвонить мне</div>
+                                    <div class="head__call fz18 lh__25 ff__jb" data-fancybox data-src="#modalCall">Позвонить мне</div>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-10">
                             <div class="sect__ind-btn">
-                                <div class="btn__img">
+                                <div class="btn__img" data-fancybox data-src="#modalCall">
                                     <img src="icons/svg/btn.svg" alt="" class="img-responsive">
                                     <div class="btn__img-title fz24 lh__34 ff__jb">Рассчитать</div>
                                 </div>
@@ -386,7 +386,7 @@
                     <div class="row">
                         <div class="col-lg-10 offset-lg-1">
                             <div class="sect__ind-btn">
-                                <div class="btn__img btn__img-no">
+                                <div class="btn__img btn__img-no" data-fancybox data-src="#modalCall">
                                     <img src="icons/svg/btn.svg" alt="" class="img-responsive">
                                     <div class="btn__img-title fz24 ff__jb">Рассчитать</div>
                                 </div>
@@ -1040,7 +1040,7 @@
                             <div class="row">
                                 <div class="col-lg-10 offset-lg-1">
                                     <div class="sect__ind-btn">
-                                        <div class="btn__img">
+                                        <div class="btn__img" data-fancybox data-src="#modalCall">
                                             <img src="icons/svg/btn.svg" alt="" class="img-responsive">
                                             <div class="btn__img-title fz24 lh__34 ff__jb">Рассчитать</div>
                                         </div>
@@ -1481,6 +1481,39 @@
         </div>
     </footer>
 </section>
+
+<div id="modalCall" style="display: none;">
+    <form class="form__call">
+        <div class="form__call-wrap">
+            <div class="form__call-title fz18 lh__25 ff__jb">Введите свои данные и получите расчет
+                стоимости и сроков за 2 часа
+            </div>
+            <div>
+                <div class="inp__parent">
+                    <input type="text" name="name" class="inp__all" placeholder=" ">
+                    <div class="inp__label">Имя</div>
+                </div>
+            </div>
+            <div>
+                <div class="inp__parent">
+                    <input type="text" name="phone" class="inp__all inp__phone" placeholder=" ">
+                    <div class="inp__label">Телефон<span class="c__accent"> (Обязательно)</span></div>
+                </div>
+            </div>
+            <button class="btn__img btn__img-no">
+                <img src="icons/svg/btn2.svg" alt="" class="img-responsive">
+                <span class="btn__img-title fz24 lh__34 ff__jb">Получить</span>
+            </button>
+            <div class="form__call-check js__label">
+                <input type="checkbox" id="ch2" class="inp__check js__label-check" checked>
+                <label for="ch2" class="form__call-check__label js__label-title fz14">
+                    Я даю свое согласие на обработку <br> персональных данных и соглашаюсь с <br>
+                    <a href="#" target="_blank" class="c__accent">политикой конфиденциальности</a>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script> ymaps.ready(init);

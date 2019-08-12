@@ -853,7 +853,8 @@ button {
     -webkit-border-radius: 15px;
             border-radius: 15px;
     border: 2px solid #fcb922;
-    padding: 40px 26px; }
+    padding: 40px 26px;
+    text-align: center; }
   .form__call-title {
     margin-bottom: 24px; }
   .form__call-check {
